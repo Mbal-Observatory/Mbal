@@ -1,0 +1,13 @@
+//- Box minimal
+	@param {object}  obj           - box object
+	@param {string}  obj.iconSvg   - icon title
+	@param {string}  obj.title     - box title
+	@param {string}  obj.text      - box content
+
+mixin box-minimal( obj )
+	- let iconSvg = obj.iconSvg
+	article.box-minimal
+		.box-minimal-icon
+			+#{iconSvg}
+		h5.box-minimal-title: a(href='services.html')= obj.title
+		.box-minimal-text= obj.text

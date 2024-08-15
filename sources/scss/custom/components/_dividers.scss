@@ -1,0 +1,11 @@
+/** @section Dividers */
+
+// Hr
+hr {
+	background-color: $hr-border-color;
+	opacity: .6;
+	&:not([size]) {
+		height: $hr-border-width;
+	}
+}
+

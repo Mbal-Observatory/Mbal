@@ -1,0 +1,174 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-modern
+include ../elements/_ui-boxes
+include ../elements/_ui-blogs
+
+//- Page
+block page
+	include ../sections/_header
+	="\n"
+
+	section.section.section-one-screen.bg-image.novi-bg.novi-bg-img(style='background-image: url(images/bg-01.jpg);')
+		.container
+			.row: .col-md-9
+				h1 Explore the planets
+				p.h5.lh-2 The Astroda Observatory is the most innovative research center in the area providing access to the state-of-the-art telescopes and new discoveries.
+				a(href='about-us.html').button.button-lg.button-icon.button-icon-right.button-primary
+					| Learn more
+					span.icon.mdi.mdi-arrow-right
+
+	// A few words about
+	section.section.section-lg.bg-default.novi-bg.novi-bg-img
+		.container
+			.row
+				.col-md-8.col-xl-5
+					h6.text-primary About Us
+					h2 Leading astronomical observatory
+			.row.row-xl.row-30
+				.col-md-5.offset-md-1.col-xl-4.offset-xl-2
+					p.lead Astroda is the US national research & development center for ground-based night-time astronomy. Our mission is to provide public access to qualified professional researchers to forefront scientific capabilities.
+				.col-md-5.offset-md-1.col-xl-4.offset-xl-1
+					p.lead The observatory is equipped with a 24-inch PlaneWave CDK24 reflector on a Mathis MI1000 high precision fork mount. Other 8-inch reflectors are set up outside the dome during viewing sessions if attendance warrants.
+			.row: .col.offset-md-1.offset-xl-2
+				a.button-link(href='about-us.html') Learn more
+					span.icon.mdi.mdi-arrow-right
+
+	// Courses
+	section.section.novi-bg.novi-bg-img
+		.parallax-container
+			.parallax-container( data-parallax-img='images/parallax-bg-01.jpg' )
+				.parallax-content.context-dark.section-xxl
+					.container: .row.row-30.align-items-end
+						.col-md-9
+							h3 Astronomy courses for young scientists
+							p.text-block-xl Astroda regularly organizes courses for young scientists and everyone who wants to find out more about astronomy. Feel free to learn more about what we offer by browsing our website.
+						.col-md-3.text-md-end
+							a.button-link(href='services.html') Read more
+								span.icon.mdi.mdi-arrow-right
+
+	// Services
+	section.section.section-lg.bg-default.novi-bg.novi-bg-img
+		.container
+			.row: .col-md-9
+				h6.text-primary What we offer
+				h3 Our observatory provides a wide set of services for every visitor
+			.row.row-lg.row-20.row-md-40
+				.col-md-6.col-lg-4
+					+box-minimal({
+						iconSvg: 'icon-svg-research',
+						title: 'Research',
+						text: 'We provide quality research services to local and international clients.'
+					})
+				.col-md-6.col-lg-4
+					+box-minimal({
+						iconSvg: 'icon-svg-scientist',
+						title: 'Educational courses',
+						text: 'Join our educational courses to discover more about astronomy.'
+					})
+				.col-md-6.col-lg-4
+					+box-minimal({
+						iconSvg: 'icon-svg-astronaut',
+						title: 'Children classes',
+						text: 'Astroda offers a variety of astronomy activities for children of any age.'
+					})
+				.col-md-6.col-lg-4
+					+box-minimal({
+						iconSvg: 'icon-svg-scientist-2',
+						title: 'Informational services',
+						text: 'Our team also offers a variety of online and offline informational services.'
+					})
+				.col-md-6.col-lg-4
+					+box-minimal({
+						iconSvg: 'icon-svg-telescope',
+						title: 'Equipment rental',
+						text: 'Our observatory allows you to rent the equipment for your own research.'
+					})
+
+	// Divider
+	.container: hr
+
+	// Why Us
+	section.section.section-lg.novi-bg.novi-bg-img.bg-default
+		.container
+			.row.row-30.align-items-md-center
+				.col-md-6.col-xl-5
+					h6.text-primary Why choose us?
+					h3.pe-xl-5 We're dedicated to offering you the best experience
+					p.lead From acclaimed researchers to regular visitors, our observatory is a great place to spend time at. With the best equipment and friendly team, we are always glad to meet new visitors.
+				.col-md-6.offset-xl-1
+					+img('home-01-620x610')
+
+	// Excursion
+	section.section.novi-bg.novi-bg-img
+		.parallax-container
+			.parallax-container( data-parallax-img='images/parallax-bg-02.jpg' )
+				.parallax-content.context-dark.section-xxl
+					.container: .row.row-30.align-items-end
+						.col-md-9
+							h3 Night excursions to the Observatory
+							p.text-block-xl Explore the highlights of the southern sky on a night tour at the oldest local observatory. Use our telescopes to see the stars during this unique experience.
+						.col-md-3.text-md-end
+							a.button-link(href='single-service.html') Read more
+								span.icon.mdi.mdi-arrow-right
+
+	// Gallery
+	section.section.section-lg.bg-default.novi-bg.novi-bg-img
+		.container( data-lightgallery='group')
+			.row: .col
+				h6.text-primary Gallery
+				h3 Take a look at the best photos from our observatory
+			.row.row-lg.row-20.align-items-end
+				.col-md-7
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-01.jpg')
+						+img('gallery-01-730x720')
+				.col-md-5
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-02.jpg')
+						+img('gallery-02-510x500')
+			.row.row-sm.row-20.row-md-50.align-items-start
+				.col-md-5.offset-md-1
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-03.jpg')
+						+img('gallery-03-510x500')
+				.col-md-6
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-04.jpg')
+						+img('gallery-04-620x610')
+
+	// Divider
+	.container: hr
+
+	// Blog
+	section.section.section-lg.bg-default.novi-bg.novi-bg-img
+		.container
+			.row: .col
+				h6.text-primary Blog
+				h3 Latest news
+				.owl-carousel.owl-layout-7(data-loop='false', data-items='1', data-owl= {
+					nav: true,
+					autoplayTimeout: 3000
+				} )
+					+post-list({
+						img: 'home-02-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'A Planet Hotter Than Most Stars',
+						text: 'A newly discovered Jupiter-like world is so hot, it\'s being vaporized by its own star. With a dayside temperature of more than 7,800...'
+					})
+					+post-list({
+						img: 'home-03-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Hubble Captures  Dead Disc Galaxy',
+						text: 'By combining the power of a "natural lens" in space with the capability of NASA\'s Hubble Space Telescope, astronomers made a...'
+					})
+					+post-list({
+						img: 'home-04-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Lunar Eclipse: Your  Viewing Guide',
+						text: 'On the morning of January 31, people with clear skies across western North America will have front-row seats to the first total...'
+					})
+
+
+	// Page Footer
+	include ../sections/_footer

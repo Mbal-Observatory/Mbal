@@ -1,0 +1,65 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Services'
+
+//- Page
+block page
+	include ../sections/_header
+	// Page Header
+	+breadcrumbs-header({
+		text: "What We Offer"
+	})
+
+	section.section.section-wrap.section-wrap-equal: .section-wrap-inner
+		.container.container-bigger
+			.row.row-fix.row-ten.justify-content-md-center.justify-content-lg-start.justify-content-xl-between
+				.col-md-8.col-lg-4: .section-lg
+					h3 Research
+					.divider.divider-default
+					p Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur fugiat quo.
+					a.button.button-primary(href='single-service.html') Learn more
+		
+		.section-wrap-aside.section-wrap-image
+			+jpg('services-1-960x660')
+	
+	section.section.section-wrap.section-wrap-equal.section-lg-reverse: .section-wrap-inner
+		.container.container-bigger
+			.row.row-fix.row-ten.justify-content-md-center.justify-content-lg-start.justify-content-lg-end
+				.col-md-8.col-lg-4: .section-lg
+					h3 Educational courses
+					.divider.divider-default
+					p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.
+					a.button.button-primary(href='single-service.html') Learn more
+		
+		.section-wrap-aside.section-wrap-image
+			+jpg('services-2-960x660')
+	
+	section.section.section-wrap.section-wrap-equal: .section-wrap-inner
+		.container.container-bigger
+			.row.row-fix.row-ten.justify-content-md-center.justify-content-lg-start.justify-content-xl-between
+				.col-md-8.col-lg-4: .section-lg
+					h3 Children classes
+					.divider.divider-default
+					p Non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero.
+					a.button.button-primary(href='single-service.html') Learn more
+		
+		.section-wrap-aside.section-wrap-image
+			+jpg('services-3-960x660')
+	
+	section.section.section-wrap.section-wrap-equal.section-lg-reverse: .section-wrap-inner
+		.container.container-bigger
+			.row.row-ten.justify-content-md-center.justify-content-lg-start.justify-content-lg-end
+				.col-md-8.col-lg-4: .section-lg
+					h3 Equipment rental
+					.divider.divider-default
+					p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic.
+					a.button.button-primary(href='single-service.html') Learn more
+		
+		.section-wrap-aside.section-wrap-image
+			+jpg('services-4-960x660')
+
+	include ../sections/_cta
+	
+	// Page Footer
+	include ../sections/_footer

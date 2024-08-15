@@ -1,0 +1,35 @@
+//- Post
+	@param {object} obj              - post object
+	@param {string} obj.img          - post img
+	@param {string} obj.date         - post date
+	@param {string} obj.dateFormat   - post dateFormat
+	@param {string} obj.title        - post title
+	@param {string} obj.text         - post text
+
+mixin post(obj)
+	article.post-default&attributes(attributes)
+		.post-figure
+			+img(obj.img)
+		.post-body
+			.post-meta
+				span.icon.icon-sm.icon-primary.mdi.mdi-clock
+				time(datetime= obj.dateFormat)= obj.date
+			h5.post-title: a(href='blog-post.html')= obj.title
+			.post-text= obj.text
+			a.button-link(href='blog-post.html') Read more
+				span.icon.mdi.mdi-arrow-right
+
+//- Post List
+mixin post-list(obj)
+	article.post-list&attributes(attributes)
+		.post-figure
+			+img(obj.img)
+		.post-body
+			.post-meta
+				span.icon.icon-sm.icon-primary.mdi.mdi-clock
+				time(datetime= obj.dateFormat)= obj.date
+			h4.post-title: a(href='blog-post.html')= obj.title
+			.post-text= obj.text
+			a(href='blog-post.html').button.button-lg.button-icon.button-icon-right.button-primary
+				| Learn more
+				span.icon.mdi.mdi-arrow-right

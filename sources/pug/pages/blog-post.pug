@@ -1,0 +1,71 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_subscribe-form
+
+block variables
+	- pageName = 'Single Post'
+
+//- Page
+block page
+	// Page Header
+	include ../sections/_header
+	+breadcrumbs-header({
+		text: "Our News",
+		title: 'Blog'
+	})
+	='\n'
+
+	// Single post
+	section.section.section-lg.bg-default
+		// section wave
+		.container
+			.row.justify-content-sm-center
+				.col-lg-10.col-xl-8
+					article.post-blog-article
+						p.post-blog-article-title A Planet Hotter Than Most Stars
+						ul.post-blog-article-meta.group-xl
+							li: .box-inline
+								span.icon.novi-icon.icon-md.icon-primary.mdi.mdi-account
+								| by
+								div: a(href='#') Ronald Chen
+							li: .box-inline
+								span.icon.novi-icon.icon-md.icon-primary.mdi.mdi-calendar-clock
+								time(datetime='2021') Aug 21, 2021 at 5:47 pm
+						p.big Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate distinctio dolor doloremque eaque ipsa, labore laborum nisi quaerat, qui quia quis quos recusandae velit voluptatum. Aperiam architecto facilis veniam!
+						+jpg('blog-03-870x580')
+						p Eaque, error exercitationem, harum laudantium nam nemo nisi obcaecati quo repellat sapiente sed unde vel vitae. Accusantium blanditiis culpa doloribus eum ipsum modi optio quaerat quibusdam voluptatibus? Cupiditate, praesentium, sed? Dolorum eum qui similique?
+						p Exercitationem harum mollitia nesciunt numquam perferendis porro possimus provident reiciendis temporibus ullam velit. Alias asperiores consequuntur, corporis dignissimos eligendi, et eveniet explicabo illum iure laborum magnam officiis repellendus, rerum similique temporibus unde veniam. Assumenda id ipsam itaque natus omnis porro sapiente suscipit tenetur.
+
+						article.quote-primary
+							svg.quote-primary-mark(version='1.1', xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='35px', height='25px', viewbox='0 0 35 25')
+								path(d='M27.461,10.206h7.5v15h-15v-15L25,0.127h7.5L27.461,10.206z M7.539,10.206h7.5v15h-15v-15L4.961,0.127h7.5\L7.539,10.206z')
+							.quote-primary-text: p The KELT-9 star is only 300 million years old, which is young in star time. It is more than twice as large, and nearly twice as hot, as our sun. Given that the planet's atmosphere is constantly blasted with high levels of ultraviolet radiation, the planet may even be shedding a tail of evaporated planetary material.
+
+							p.quote-primary-meta
+								span by
+								span.cite Ronald Chen
+						p Et, expedita hic minima neque obcaecati quae. Accusamus atque consectetur deserunt dolore, dolorem doloribus dolorum ea expedita hic iste mollitia nam nesciunt odit quisquam quos recusandae repellat rerum tenetur vitae, voluptates. Consequuntur distinctio dolorem error exercitationem illo minima necessitatibus neque nostrum pariatur praesentium provident quam, quis reiciendis sequi, sint, sit totam veniam?
+						.group-md.group-middle.button-group
+							ul.list-social
+								li: a.icon.icon-sm.icon-white.icomoon-youtube(href='#')
+								li: a.icon.icon-sm.icon-white.icomoon-facebook(href='#')
+								li: a.icon.icon-sm.icon-white.icomoon-instagram(href='#')
+								li: a.icon.icon-sm.icon-white.icomoon-twitter(href='#')
+								li: a.icon.icon-sm.icon-white.icomoon-linkedin(href='#')
+
+					include ../sections/_post-footer
+	="\n"
+
+	// NewsLetter
+	section.section.section-lg.bg-default
+		.container
+			.row.row-50.justify-content-md-center
+				.col-lg-10.col-xl-8
+					h3.text-center Newsletter
+					p Keep up with our always upcoming news and updates. #[br] Enter your e-mail and subscribe to our newsletter.
+					+subscribe-form('rd-mailform-inline-modern')
+	="\n"
+
+	// Page Footer
+	include ../sections/_footer

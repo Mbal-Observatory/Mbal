@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = '404 Page'
+
+//- Page
+block page
+	section.section
+		// Page Header
+		header.page-header.bg-gray-darker.breadcrumbs-custom-wrap
+			include ../sections/_header
+
+		section.fullwidth-page.bg-image.novi-bg.novi-bg-img(style='background-image: url(images/bg-10.jpg)')
+			.fullwidth-page-inner
+				.section-md.text-center
+					.container
+						p.breadcrumbs-custom-subtitle Sorry, But the Page Was not Found
+						p.heading-1.breadcrumbs-custom-title Error 404
+						p You may have mistyped the address or the page may have moved.
+						a(href='index.html').button.button-icon.button-icon-right.button-primary
+							| Back to home page
+							span.icon.mdi.mdi-arrow-right
+
+
+				// Page Footer
+				.section-xs.page-footer.text-center
+
+					.container
+						+rights

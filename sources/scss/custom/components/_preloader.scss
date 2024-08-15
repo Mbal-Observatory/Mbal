@@ -1,0 +1,65 @@
+/** @section Preloader */
+
+// Base styles
+// -------------------------
+
+
+.page-loader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	z-index: 9999999;
+	background: $body-bg;
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,25,50,1) 46%);
+	transition: .3s all ease;
+
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	&.ending {
+		display: none;
+	}
+}
+
+[data-x-mode="true"] .page-loader {
+	display: none !important;
+}
+
+.preloader-inner {
+	display: inline-block;
+	position: relative;
+	animation: rotation 2s infinite linear;
+}
+
+.preloader-svg {
+	width: 100px;
+	height: auto;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}
+@keyframes rotation {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(359deg);
+	}
+}

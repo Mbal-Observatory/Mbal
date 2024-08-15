@@ -1,0 +1,69 @@
+/** @section Footers */
+
+p.rights {
+	font-size: 15px;
+
+	a {
+		&, &:focus, &:active {
+			color: inherit;
+		}
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+* + p.rights {
+	margin-top: 40px;
+}
+
+
+
+// Footer simple
+.footer-simple {
+	padding: 50px 0 40px;
+	@extend %context-dark;
+	.logo-inverse { display: none; }
+	.brand-name + h2 { margin-top: 40px; }
+}
+
+* + .button-link { margin-top: 30px; }
+* + .list-footer-info {
+	margin-top: 30px;
+}
+.list-footer-info {
+	li + li { margin-top: 24px; }
+}
+
+@include media-breakpoint-up( md ) {
+	.footer-simple {
+		padding: 70px 0 40px;
+	}
+	* + p.rights {
+		margin-top: 70px;
+	}
+	* + .list-footer-info {
+		margin-top: 80px;
+	}
+	* + .button-link { margin-top: 50px; }
+}
+
+@include media-breakpoint-up( xl ) {
+	.footer-simple {
+		padding: 150px 0 40px;
+	}
+	.footer-social { margin-top: 20px; }
+	* + p.rights {
+		margin-top: 150px;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.footer-simple {
+		padding: 300px 0 40px;
+	}
+	* + p.rights {
+		margin-top: 330px;
+	}
+}

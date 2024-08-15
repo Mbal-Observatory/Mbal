@@ -1,0 +1,28 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = '503 page'
+
+//- Page
+block page
+	section.section
+		// Page Header
+		header.page-header.bg-gray-darker.breadcrumbs-custom-wrap
+			include ../sections/_header
+
+		section.fullwidth-page.bg-image.novi-bg.novi-bg-img(style='background-image: url(images/bg-10.jpg)')
+			.fullwidth-page-inner
+				.section-md.text-center
+					.container
+						p.breadcrumbs-custom-subtitle Service is Temporary Unavailable
+						p.heading-1.breadcrumbs-custom-title Error 503
+						p Sorry, we're offline right now to make our site even better. #[br.d-none.d-md-inline]Please, come back later and check what we've been up to.
+						.group-md.button-group
+							a(href='landing-default.html').button.button-primary Back to home page
+							a(href='contacts.html').button.button-dark Contact us
+
+
+				// Page Footer
+				.section-xs.page-footer.text-center
+					.container
+						+rights

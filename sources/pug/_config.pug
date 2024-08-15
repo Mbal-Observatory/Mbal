@@ -1,0 +1,80 @@
+-
+	var
+		htmlClass = [ 'wide', 'wow-animation' ],
+		fonts = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap",
+
+		logo = {
+			default:   'logo-default-157x36.svg',
+			inverse:   'logo-inverse-157x36.svg',
+			name:      'Astroda'
+		},
+
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About us'
+			},
+			{
+				title: 'Our team',
+				link: 'team.html',
+				dropdown: [
+					{ title: 'Team member' }
+				]
+			},
+			{
+				title: 'Services',
+				dropdown: [
+					{ title: 'Single service' }
+				]
+			},
+			{
+				title: 'Blog',
+				dropdown: [
+					{ title: 'Blog post' }
+				]
+			},
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Elements',
+						link: null,
+						list: [
+							{title: 'Buttons'},
+							{title: 'Forms'},
+							{title: 'Grid system'},
+							{title: 'Tables'},
+							{title: 'Typography'}
+						]
+					},
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{title: 'FAQs'},
+							{title: 'Privacy policy'},
+							{title: '404 page'},
+							{title: '503 page'},
+							{title: 'Search results'},
+						]
+					}
+				]
+			},
+			{
+				title: 'Gallery'
+			},
+			{
+				title: 'Contacts'
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home',
+		counter = 0,
+		contactFormCounter = 0,
+		subscribeFormCounter = 0;

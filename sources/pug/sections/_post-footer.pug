@@ -1,0 +1,67 @@
+.section-md.bg-default
+	p.h3-alternate Comments
+	.comment-group
+		// Comment
+		article.comment
+			.comment-avatar: +jpg('user-1-80x80')
+			.comment-body
+				.comment-header
+					p.comment-title Catherine Payne
+					time.comment-time(datetime='2021') 2 days ago
+				.comment-text: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, cumque debitis ex, harum hic maxime minima neque nobis numquam, obcaecati.
+				.comment-footer: a.comment-link-reply(href='#') Reply
+
+		.comment-group
+			// Comment
+			article.comment
+				.comment-avatar: +jpg('user-2-80x80')
+				.comment-body
+					.comment-header
+						p.comment-title Ronald Chen
+						time.comment-time(datetime='2021') 2 days ago
+						span.comment-reply Catherine Payne
+					.comment-text: p Ab adipisci at atque cumque, debitis dolor et expedita explicabo fugiat id obcaecati quibusdam sit voluptatem. Facere, maxime rerum.
+					.comment-footer: a.comment-link-reply(href='#') Reply
+
+
+		// Comment
+		article.comment
+			.comment-avatar: +jpg('user-3-80x80')
+			.comment-body
+				.comment-header
+					p.comment-title Philip Bowman
+					time.comment-time(datetime='2021') 2 days ago
+				.comment-text: p Vero labore libero molestiae nesciunt, odit quidem repellat sint unde vero vitae voluptatum? Consequuntur, earum eligendi et molestiae nemo odio omnis.
+				.comment-footer: a.comment-link-reply(href='#') Reply
+
+.section-lg.bg-default.pb-0
+	p.h3-alternate Send a Comment
+	// RD Mailform
+	form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+		.row.row-20.row-fix
+			.col-md-6
+				.form-wrap.form-wrap-validation
+					label.form-label-outside(for='form-comment-name') First name
+					input.form-input(id='form-comment-name' type="text" name="name" data-constraints='@Required')
+			.col-md-6
+				.form-wrap.form-wrap-validation
+					label.form-label-outside(for='form-comment-last-name') Last name
+					input.form-input(id='form-comment-last-name' type="text" name="last-name" data-constraints="@Required")
+			.col-md-6
+				.form-wrap.form-wrap-validation
+					label.form-label-outside(for='form-comment-email') E-mail
+					input.form-input(id='form-comment-email' type="email" name="email" data-constraints="@Email @Required")
+			.col-md-6
+				.form-wrap.form-wrap-validation
+					label.form-label-outside(for='form-comment-phone') Phone
+					input.form-input(id='form-comment-phone' type="text" name="phone" data-constraints="@Numeric @Required")
+			.col-sm-12
+				.form-wrap.form-wrap-validation
+					label.form-label-outside(for='form-comment-message') Message
+					textarea.form-input(id='form-comment-message' name="message" data-constraints="@Required")
+			.col-sm-12.offset-custom-4
+				.form-button
+					button.button.button-lg.button-icon.button-icon-right.button-primary(type='submit')
+						| Submit
+						span.icon.mdi.mdi-arrow-right
+

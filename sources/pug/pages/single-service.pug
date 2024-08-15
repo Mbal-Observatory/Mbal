@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_pricings
+include ../elements/_ui-thumbnail-classic
+include ../sections/_accordion
+
+block variables
+	- pageName = 'Single service'
+
+//- Page
+block page
+	include ../sections/_header
+	// Page Header
+	+breadcrumbs-header({
+		text:  "Single Service",
+		title: 'Research'
+	})
+	='\n'
+	
+	// about service
+	section.section.section-lg.text-center.text-md-start.bg-default
+		.container
+			.row.row-ten.row-50.justify-content-md-center.justify-content-xl-between
+				.col-md-8.col-lg-4
+					h3 Research
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+					// Quote minimal
+					article.quote-minimal
+						p.quote-minimal-text We are ready to provide assistance in your research.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+					a.button.button-primary(href='#') Order now
+				
+				.col-md-8.col-lg-6.col-xl-5.text-center
+					include ../elements/_ui-blick-imac
+	="\n"
+	
+	section.section.section-lg.text-center.bg-image.bg-image-7.novi-bg.novi-bg-img( data-preset!={title: 'Services 3', category: 'services', reload: false, id: 'services-3'} )
+		.container
+			.row.justify-content-sm-center.row-50
+				.col-sm-6.col-lg-3
+					+thumbnail-classic({
+						icon_class: 'mdi mdi-thumb-up-outline',
+						title:      'Best equipment',
+						text:       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
+					})
+				
+				.col-sm-6.col-lg-3
+					+thumbnail-classic({
+						icon_class: 'mdi mdi-account-multiple',
+						title:      'Experienced team',
+						text:       'Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.'
+					})
+				
+				.col-sm-6.col-lg-3
+					+thumbnail-classic({
+						icon_class: 'mdi mdi-headset',
+						title:      'Professional support',
+						text:       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.'
+					})
+				
+				.col-sm-6.col-lg-3
+					+thumbnail-classic({
+						icon_class: 'mdi mdi-credit-card',
+						title:      'Affordable pricing',
+						text:       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.'
+					})
+	='\n'
+
+	include ../sections/_quotes
+	
+	section.section.section-lg.bg-default
+		.container
+			h3.text-center.text-lg-start Frequently Asked #[br]Questions
+			.row.row-ten.row-50.justify-content-md-center.justify-content-xl-between
+				.col-md-9.col-lg-5.col-xxl-5
+					+accordion-corporate({
+						accordionId: 'accordion1'
+					})
+				.col-md-9.col-lg-5.col-xxl-4.d-none.d-lg-block
+					figure.image-default: +jpg('accordions-01-448x565')
+	='\n'
+
+	// do you need a consultation?
+	section.section.section-md.bg-accent.text-center.text-md-start
+		.container
+			.row
+				.col-xl-11
+					.box-cta.box-cta-inline
+						.box-cta-inner
+							h3.box-cta-title
+								span.box-cta-icon.mdi.mdi-case-sensitive-alt
+								span Free courses
+							p Free courses contain industry-relevant content and practical tasks and projects.
+						.box-cta-inner
+							a.button.button-dark(href='about-us.html') Contact us
+	
+	// Page Footer
+	include ../sections/_footer

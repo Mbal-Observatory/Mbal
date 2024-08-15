@@ -1,0 +1,67 @@
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap.rd-navbar-wrap-absolute
+		nav.rd-navbar.rd-navbar-centered(
+			data-layout=                'rd-navbar-fixed'
+			data-sm-layout=             'rd-navbar-fixed'
+			data-md-layout=             'rd-navbar-fixed'
+			data-lg-layout=             'rd-navbar-static'
+			data-xl-layout=             'rd-navbar-static'
+			data-xxl-layout=            'rd-navbar-static'
+
+			data-md-device-layout=      'rd-navbar-fixed'
+			data-lg-device-layout=      'rd-navbar-static'
+			data-xl-device-layout=      'rd-navbar-static'
+			data-xxl-device-layout=     'rd-navbar-static'
+
+			data-lg-stick-up-offset=    '46px'
+			data-xl-stick-up-offset=    '46px'
+			data-xxl-stick-up-offset=   '46px'
+
+			data-lg-stick-up=           'true'
+			data-xl-stick-up=           'true'
+			data-xxl-stick-up=          'true'
+		)
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span
+			.rd-navbar-aside-outer.rd-navbar-collapse.bg-gray-700
+				.rd-navbar-aside
+					ul.list-inline-md.rd-navbar-info
+						li: .unit.unit-spacing-xs.align-items-center
+							.unit-left: span.icon.icon-xs.icon-white.text-middle.icomoon-map
+							.unit-body: a.small(href='#') 178 West 27th Street, Suite 527, New York NY 10012, United States
+						li: .unit.unit-spacing-xs.align-items-center
+							.unit-left: span.icon.icon-xs.icon-white.text-middle.icomoon-email
+							.unit-body: a.small(href='mailto:#') mail@demolink.org
+					ul.list-social.rd-navbar-social
+						li: a.icon.icon-sm.icon-white.icomoon-youtube(href='#')
+						li: a.icon.icon-sm.icon-white.icomoon-facebook(href='#')
+						li: a.icon.icon-sm.icon-white.icomoon-instagram(href='#')
+						li: a.icon.icon-sm.icon-white.icomoon-twitter(href='#')
+						li: a.icon.icon-sm.icon-white.icomoon-linkedin(href='#')
+
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					.rd-navbar-aside-left
+						.rd-navbar-nav-toggle.mdi.mdi-menu( data-multitoggle='.rd-navbar-nav-wrap' ): span
+					.rd-navbar-aside-center
+						.rd-navbar-panel
+							//RD Navbar Toggle
+							button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap'): span
+
+							//RD Navbar Brand
+							.rd-navbar-brand
+								+logo
+					.rd-navbar-aside-right.position-relative
+						//RD Navbar Search
+						.rd-navbar-search
+							button.rd-navbar-search-toggle.rd-navbar-fixed-element-2(data-rd-navbar-toggle='.rd-navbar-search'): span
+							form.rd-search.form-sm(action='search-results.html' data-search-live='rd-search-results-live' method='GET')
+								.form-wrap
+									label.form-label(for='rd-navbar-search-form-input') Search
+									input(class='rd-navbar-search-form-input form-input' id='rd-navbar-search-form-input' type='text' name='s' autocomplete="off")
+									#rd-search-results-live.rd-search-results-live
+								button.rd-search-form-submit.icomoon-search(type='submit')
+					.rd-navbar-nav-wrap
+						.rd-navbar-close-toggle.mdi.mdi-close( data-multitoggle='.rd-navbar-nav-wrap' ): span
+						.rd-navbar-nav-wrap-inner
+							+navigation( menu )

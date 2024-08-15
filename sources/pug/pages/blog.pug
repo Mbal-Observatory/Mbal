@@ -1,0 +1,81 @@
+extends  ../_skeleton
+include ../elements/_ui-blogs
+
+block variables
+	- pageName = 'Grid Blog'
+
+//- Page
+block page
+	// Page Header
+	include ../sections/_header
+	+breadcrumbs-header({
+		text: "Our News"
+	})
+	='\n'
+
+	// Blog
+	section.section.section-xl.bg-gray-lighter.novi-bg.novi-bg-img
+		.container
+			.row.row-40.row-md-50
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-02-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'A Planet Hotter Than Most Stars',
+						text: 'A newly discovered Jupiter-like world is so hot, it\'s being vaporized by its own star. With a dayside temperature of more than 7,800...'
+					})
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-03-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Hubble Captures  Dead Disc Galaxy',
+						text: 'By combining the power of a "natural lens" in space with the capability of NASA\'s Hubble Space Telescope, astronomers made a...'
+					})
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-04-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Lunar Eclipse: Your  Viewing Guide',
+						text: 'On the morning of January 31, people with clear skies across western North America will have front-row seats to the first total...'
+					})
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-05-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Upcoming Mars Mission in 2024',
+						text: 'An exciting new Mars mission will seek to answer questions about the Martian atmosphere and the local solar wind environment...'
+					})
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-06-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Perseid Meteor Shower is Expected',
+						text: 'With no interference from the Moon, this year\'s Perseid meteor shower should be excellent. If you couldn\'t catch the show last night...'
+					})
+				.col-md-6.col-xl-4
+					+post({
+						img: 'home-07-730x469.jpg',
+						date: 'August 21, 2021',
+						dateFormat: '2021-08-21',
+						title: 'Hubble Space Telescope Is Back in Action',
+						text: 'It has been a difficult past few weeks for NASA’s famous Hubble Space Telescope, but on Saturday, July 17th, engineers announced...'
+					})
+
+			ul.pagination-custom
+				li.active: a(href='#') 1
+				li: a(href='#') 2
+				li: a(href='#') 3
+				li: a(href='#') 4
+
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer
+
+
+

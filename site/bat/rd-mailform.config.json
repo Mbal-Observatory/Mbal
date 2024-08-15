@@ -1,0 +1,8 @@
+{
+  "useSmtp": false,
+  "host": "smtp.gmail.com",
+  "port": 465,
+  "username": "mbal.observatory@gmail.com",
+  "password": "CntCR3?XMX",
+  "recipientEmail": "mbal.observatory@gmail.com"
+}

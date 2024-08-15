@@ -1,0 +1,54 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_subscribe-form
+
+block variables
+	- pageName = 'Gallery'
+
+//- Page
+block page
+	// Page Header
+	include ../sections/_header
+	+breadcrumbs-header({
+		title: 'Gallery'
+	})
+	='\n'
+
+	// Gallery
+	section.section.section-md.bg-default
+		.container( data-lightgallery='group')
+			.row.row-20.row-md-40
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-01.jpg')
+						+img('gallery-01-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-02.jpg')
+						+img('gallery-02-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-03.jpg')
+						+img('gallery-03-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-04.jpg')
+						+img('gallery-04-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-05.jpg')
+						+img('gallery-05-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-06.jpg')
+						+img('gallery-06-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-07.jpg')
+						+img('gallery-07-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-08.jpg')
+						+img('gallery-08-500x500')
+				.col-md-6.col-lg-4
+					.thumbnail-simple: a( data-lightgallery='item' href='images/originals/gallery-09.jpg')
+						+img('gallery-09-500x500')
+
+	='\n'
+
+
+	// Page Footer
+	include ../sections/_footer

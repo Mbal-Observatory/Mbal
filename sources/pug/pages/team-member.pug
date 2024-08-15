@@ -1,0 +1,124 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-team-classic
+include ../components/progress-circle
+
+block variables
+	- pageName = 'Team Member'
+
+//- Page
+block page
+	include ../sections/_header
+	// Page Header
+	+breadcrumbs-header({
+		text: 'Team Member'
+	})
+	='\n'
+	
+	// Person
+	section.section.section-lg.bg-default.text-start.novi-bg.novi-bg-img
+		.container
+			.row.row-70.row-ten.row-fix.justify-content-xl-between
+				.col-xl-4
+					.row.row-70.row-fix.align-items-md-center
+						.col-md-6.col-xl-12
+							+jpg('team-member-1-420x420')
+						.col-md-6.col-xl-12.text-md-start
+							h6 Get in Touch
+							- contactFormCounter += 1
+							// RD Mailform
+							form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+								.row.row-20.row-fix
+									.col-md-12
+										.form-wrap.form-wrap-validation
+											label.form-label-outside(for='form-' + contactFormCounter + '-name') First name
+											input.form-input(id='form-' + contactFormCounter + '-name' type="text" name="name" data-constraints='@Required')
+									.col-md-12
+										.form-wrap.form-wrap-validation
+											label.form-label-outside(for='form-' + contactFormCounter + '-email') E-mail
+											input.form-input(id='form-' + contactFormCounter + '-email' type="email" name="email" data-constraints="@Email @Required")
+									.col-sm-12
+										.form-wrap.form-wrap-validation
+											label.form-label-outside(for='form-' + contactFormCounter + '-message') Message
+											textarea.form-input(id='form-' + contactFormCounter + '-message' name="message" data-constraints="@Required")
+									
+									.col-sm-12.offset-custom-4
+										.form-button
+											button.button.button-primary(type='submit') Send message
+				
+				.col-xl-6
+					.row.row-120.row-fix
+						.col-sm-12
+							.heading-5 Lead astronomer, founder
+							h3 Theresa Webb
+							.divider.divider-default
+							p.text-spacing-sm
+								| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+							.row.text-center.row-lg.row-30.justify-content-center.mt-5
+								.col.col-sm-4
+									+progress-circle({
+										title: 'Knowledge',
+										value: 75,
+										valueClass: 'radial'
+									})
+								.col.col-sm-4
+									+progress-circle({
+										title:      'Experience',
+										value:      50,
+										valueClass: 'radial'
+									})
+								.col.col-sm-4
+									+progress-circle({
+										title:      'Research',
+										value:      25,
+										valueClass: 'radial'
+									})
+						.col-sm-12
+							.row.row-70
+								.col-md-6
+									h6 Skills
+									p Knowledge, reliability, communication, resilience, time management, teamwork strategy, support, astronomy research
+								.col-md-6
+									h6 Awards
+									ul.list.list-xxs.text-spacing-sm
+										li 2021 - The Best Astronomy Researcher
+										li 2018 - Astronomical Writing Award
+										li 2017 - International Prize in Cosmology
+								.col-md-6
+									h6 Certificates
+									ul.list.list-xxs.text-spacing-sm
+										li 2021 - Time and Space in Astronomy
+										li 2019 - Advanced Astrobiology
+										li 2017 - Data-Driven Astronomy
+								.col-md-6
+									h6 Contact information
+									ul.list-xs
+										li.box-inline.box-inline-gray
+											span.icon.novi-icon.icon-md-smaller.icon-primary.mdi.mdi-map-marker
+											div
+												a(href='#') 2130 Fulton Street, San Diego, CA
+													br
+													| 94117-1080 USA
+										
+										li.box-inline.box-inline-gray
+											span.icon.novi-icon.icon-md-smaller.icon-primary.mdi.mdi-phone
+											ul.list-comma
+												li: a(href='tel:#') 1-800-1234-567
+										
+										li
+											ul.inline-list-xs
+												li
+													a.icon.novi-icon.icon-sm-bigger.icon-gray-1.mdi.mdi-facebook(href='#')
+												li
+													a.icon.novi-icon.icon-sm-bigger.icon-gray-1.mdi.mdi-twitter(href='#')
+												li
+													a.icon.novi-icon.icon-sm-bigger.icon-gray-1.mdi.mdi-instagram(href='#')
+												li
+													a.icon.novi-icon.icon-sm-bigger.icon-gray-1.mdi.mdi-google(href='#')
+												li
+													a.icon.novi-icon.icon-sm-bigger.icon-gray-1.mdi.mdi-linkedin(href='#')
+	='\n'
+
+	// Page Footer
+	include ../sections/_footer

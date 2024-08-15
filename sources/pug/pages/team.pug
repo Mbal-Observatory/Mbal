@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-team-classic
+include ../components/progress-circle
+
+block variables
+	- pageName = 'Our team'
+
+//- Page
+block page
+	// Page Header
+	include ../sections/_header
+	+breadcrumbs-header({
+		text: 'Our team'
+	})
+	='\n'
+	
+	// Team
+	section.section.section-lg.novi-bg.novi-bg-img.bg-default
+		.container
+			.row.row-40.row-lg-50
+				.col-sm-6.col-lg-3
+					+team-default({
+						img: 'home-10-260x345',
+						title: 'Theresa Webb',
+						meta: 'Lead astronomer, founder'
+					})
+				.col-sm-6.col-lg-3
+					+team-default({
+						img: 'home-11-260x345',
+						title: 'Jenny Wilson',
+						meta: 'Analyst'
+					})
+				.col-sm-6.col-lg-3
+					+team-default({
+						img: 'home-12-260x345',
+						title: 'Jacob Jones',
+						meta: 'PR manager'
+					})
+				.col-sm-6.col-lg-3
+					+team-default({
+						img: 'home-13-260x345',
+						title: 'Bessie Cooper',
+						meta: 'Engineer'
+					})
+
+	// Page Footer
+	include ../sections/_footer
